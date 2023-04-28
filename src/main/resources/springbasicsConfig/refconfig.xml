@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- by me (Line NO) 4 5 8 9-->
+    <!-- this is our beans -->
+    <!-- "Package name" and "Class Name"-->
+
+    <bean class="com.springCoreRef.B" name="bref">
+        <property name="y" value="90" />
+    </bean>
+
+    <bean class="com.springCoreRef.A" name="aref">
+        <property name="x" value="12"/>
+        <property name="obj">
+            <ref bean="bref" />
+        </property>
+
+    </bean>
+
+</beans>
